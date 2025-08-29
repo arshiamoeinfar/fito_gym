@@ -153,7 +153,10 @@ export default function MenuBar() {
             </span>
           </div>
 
-          <div className="flex flex-col items-center mt-5">
+          <div className="flex flex-col mt-5">
+            <span className="mr-1 mb-3 mt-2 text-gray-400 text-sm">
+              مخاطب های محبوب
+            </span>
             <div className="flex justify-between w-64 bg-white mb-2 px-3 py-2 rounded-3xl items-center gap-1  text-gray-500">
               <div className="flex justify-center items-center gap-2">
                 <div className="bg-slate-400 w-7 h-7 rounded-full overflow-hidden">
@@ -163,7 +166,7 @@ export default function MenuBar() {
                   داشبورد اصلی{" "}
                 </Link>
               </div>
-              <span className="border-2 border-blue-500 rounded-full w-14 h-7 p-1  text-blue-500 flex items-center justify-center text-sm ">
+              <span className="border-2 border-blue-500 rounded-full w-14 h-7 p-1  text-blue-500 flex items-center justify-center text-sm cursor-pointer">
                 تماس
               </span>
             </div>
@@ -176,7 +179,7 @@ export default function MenuBar() {
                   داشبورد اصلی{" "}
                 </Link>
               </div>
-              <span className="border-2 border-blue-500 rounded-full w-14 h-7 p-1  text-blue-500 flex items-center justify-center text-sm ">
+              <span className="border-2 border-blue-500 rounded-full w-14 h-7 p-1  text-blue-500 flex items-center justify-center text-sm cursor-pointer">
                 تماس
               </span>
             </div>
@@ -189,9 +192,27 @@ export default function MenuBar() {
                   داشبورد اصلی{" "}
                 </Link>
               </div>
-              <span className="border-2 border-blue-500 rounded-full w-14 h-7 p-1  text-blue-500 flex items-center justify-center text-sm ">
+              <span className="border-2 border-blue-500 rounded-full w-14 h-7 p-1  text-blue-500 flex items-center justify-center text-sm cursor-pointer">
                 تماس
               </span>
+            </div>
+          </div>
+          <div className="flex flex-col mt-5">
+            <span className="mr-1 mb-3 mt-2 text-gray-400 text-sm">
+              دستگاه ها
+            </span>
+            <div className="flex justify-between w-64 bg-white mb-2 px-3 py-2 rounded-3xl items-center gap-1  text-gray-500">
+              <div className="flex justify-center items-center gap-2">
+                <div className=" w-7 h-7 rounded-full overflow-hidden">
+                  <img className="" src="images/apple.png " alt="" />
+                </div>
+                <Link className="text-sm " to="/">
+                  اتصال به ساعت{" "}
+                </Link>
+              </div>
+              <div className=" w-4 h-4 rounded-full ">
+                <img className="w-full h-full cursor-pointer" src="images/link (1).png " alt="" />
+              </div>
             </div>
           </div>
         </div>

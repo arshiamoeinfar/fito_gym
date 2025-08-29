@@ -4,15 +4,15 @@ import { faUser } from "@fortawesome/free-solid-svg-icons";
 export default function Navbar() {
   return (
     <>
-      <div class="grid grid-cols-[300px_minmax(400px,_900px)_1fr]">
-        <div class="max-w-16 h-full col-span-1 relative ">
+      <div class="grid grid-cols-[300px_minmax(400px,_1050px)_1fr] ">
+        <div class="max-w-16 h-full col-span-1 relative">
           <img
             className="w-full h-full top-0 object-contain"
             src="images/logo.png"
             alt=""
           />
         </div>
-        <div class="col-span-1  p-4 h-14 flex justify-start items-center">
+        <div class="col-span-1  p-4 h-14 flex justify-start items-center bg-red-600">
           <h2 className="text-3xl font-vazir">
             سلام، <span className="font-bold">ارشیا</span>
           </h2>
@@ -34,7 +34,7 @@ export default function Navbar() {
             5:30{" "}
           </span>
         </div>
-        <div class="col-span-1 p-4 h-14 flex items-center justify-around">
+        <div class="col-span-1 p-4 h-14 flex items-center justify-around bg-green-600">
           <div className="">
             <div className="bg-slate-200 w-auto h-10 px-4 rounded-full overflow-hidden flex items-center m-auto justify-center ">
               <svg
