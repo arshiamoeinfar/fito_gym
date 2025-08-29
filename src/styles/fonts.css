@@ -1,0 +1,10 @@
+@font-face {
+    font-family: "Vazir";
+    src: url("./../../public/fonts/Vazir-Medium-FD-WOL.ttf");
+    font-display: swap;
+}
+@font-face {
+    font-family: "Estdad";
+    src: url("./../../public//fonts/Estedad-Medium.ttf");
+    font-display: swap;
+}
