@@ -8,109 +8,221 @@ export default function RightPanel({
 }) {
 
   return (
-<div className="w-[350px]
-bg-white
-dark:bg-[#111827]
-border-l
-border-blue-100
-dark:border-gray-800
-flex
-flex-col">
+<div className="
+  w-[370px]
+  bg-white
+  dark:bg-[#0F172A]
+  border-l
+  border-gray-200
+  dark:border-gray-800
+  flex
+  flex-col
+">
 
-      {/* Header */}
+  {/* Header */}
 
-      <div className="p-6 border-b border-blue-100">
+  <div className="
+    p-6
+    border-b
+    border-gray-100
+    dark:border-gray-800
+    backdrop-blur-sm
+  ">
 
-        <div className="flex items-center justify-between mb-4">
+    <div className="flex items-center justify-between mb-4">
 
-          <h2 className="text-2xl font-bold  dark:text-blue-400">
+      <div>
 
-            {assistantMode === "coach"
-              ? "چت مربی 💬"
-              : "هوش مصنوعی 🤖"
-            }
+        <h2 className="
+          text-2xl
+          font-bold
+          text-blue-700
+          dark:text-blue-400
+        ">
 
-          </h2>
+          {assistantMode === "coach"
+            ? "چت مربی 💬"
+            : "هوش مصنوعی 🤖"
+          }
 
-          <button
-            onClick={() =>
-              setAssistantMode(
-                assistantMode === "coach"
-                  ? "ai"
-                  : "coach"
-              )
-            }
-            className="bg-blue-100 hover:bg-blue-200  dark:text-blue-400 px-4 py-2 rounded-xl"
-          >
+        </h2>
 
-            {assistantMode === "coach"
-              ? "AI"
-              : "Coach"
-            }
+        <p className="
+          text-sm
+          text-gray-500
+          dark:text-gray-400
+          mt-1
+        ">
 
-          </button>
+          {assistantMode === "coach"
+            ? "ارتباط مستقیم با مربی"
+            : "دستیار هوشمند تمرینی"
+          }
 
-        </div>
-
-      </div>
-
-      {/* Messages */}
-
-      <div className="flex-1 overflow-y-auto p-6 space-y-4">
-
-        {messages.map((message) => (
-
-          <div
-            key={message.id}
-            className={`flex
-              ${message.sender === "user"
-                ? "justify-end"
-                : "justify-start"
-              }`}
-          >
-
-            <div
-              className={`max-w-[80%] p-4 rounded-2xl
-                ${message.sender === "user"
-                  ? "bg-blue-600 text-white"
-                  : "bg-blue-100"
-                }`}
-            >
-
-              {message.text}
-
-            </div>
-
-          </div>
-
-        ))}
+        </p>
 
       </div>
 
-      {/* Input */}
+      <button
+        onClick={() =>
+          setAssistantMode(
+            assistantMode === "coach"
+              ? "ai"
+              : "coach"
+          )
+        }
+        className="
+          px-4
+          py-2
+          rounded-2xl
+          bg-blue-50
+          hover:bg-blue-100
+          dark:bg-[#1E293B]
+          dark:hover:bg-[#334155]
+          text-blue-700
+          dark:text-blue-300
+          transition
+          border
+          border-gray-200
+          dark:border-gray-700
+        "
+      >
 
-      <div className="p-6 border-t border-blue-100">
+        {assistantMode === "coach"
+          ? "AI"
+          : "Coach"
+        }
 
-        <div className="flex gap-3">
-
-          <input
-            value={input}
-            onChange={(e) => setInput(e.target.value)}
-            placeholder="پیام بنویس..."
-            className="flex-1 border border-blue-200 rounded-2xl p-3"
-          />
-
-          <button
-            onClick={sendMessage}
-            className="bg-blue-600 hover:bg-blue-700 text-white px-5 rounded-2xl"
-          >
-            ارسال
-          </button>
-
-        </div>
-
-      </div>
+      </button>
 
     </div>
+
+  </div>
+
+  {/* Messages */}
+
+  <div className="
+    flex-1
+    overflow-y-auto
+    p-6
+    space-y-5
+  ">
+
+    {messages.map((message) => (
+
+      <div
+        key={message.id}
+        className={`flex
+          ${message.sender === "user"
+            ? "justify-end"
+            : "justify-start"
+          }`}
+      >
+
+        <div
+          className={`
+            max-w-[82%]
+            px-5
+            py-4
+            rounded-3xl
+            text-[15px]
+            leading-7
+            shadow-sm
+            border
+
+            ${message.sender === "user"
+              ? `
+                bg-blue-600
+                text-white
+                border-blue-500
+              `
+              : `
+                bg-white
+                dark:bg-[#1E293B]
+                text-gray-800
+                dark:text-gray-100
+                border-gray-200
+                dark:border-gray-700
+              `
+            }
+          `}
+        >
+
+          {message.text}
+
+        </div>
+
+      </div>
+
+    ))}
+
+  </div>
+
+  {/* Input */}
+
+  <div className="
+    p-5
+    border-t
+    border-gray-100
+    dark:border-gray-800
+    bg-white
+    dark:bg-[#0F172A]
+  ">
+
+    <div className="
+      flex
+      items-center
+      gap-3
+      bg-gray-50
+      dark:bg-[#111827]
+      border
+      border-gray-200
+      dark:border-gray-700
+      rounded-3xl
+      px-3
+      py-3
+    ">
+
+      <input
+        value={input}
+        onChange={(e) => setInput(e.target.value)}
+        placeholder={
+          assistantMode === "coach"
+            ? "پیام به مربی..."
+            : "سوال از هوش مصنوعی..."
+        }
+        className="
+          flex-1
+          bg-transparent
+          outline-none
+          text-gray-700
+          dark:text-white
+          placeholder:text-gray-400
+        "
+      />
+
+      <button
+        onClick={sendMessage}
+        className="
+          bg-blue-600
+          hover:bg-blue-700
+          text-white
+          px-5
+          py-2.5
+          rounded-2xl
+          transition
+          border
+          border-blue-500
+          shadow-sm
+        "
+      >
+        ارسال
+      </button>
+
+    </div>
+
+  </div>
+
+</div>
   )
 }

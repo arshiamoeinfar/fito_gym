@@ -75,15 +75,15 @@ export default function MainContent({ activePage, workouts }) {
           </h1>
 
           <div className="space-y-4">
-            <div className="bg-white dark:bg-[#1E293B] rounded-3xl p-6 shadow border border-blue-100">
+            <div className="bg-white dark:bg-[#1E293B] rounded-3xl p-6 shadow border border-blue-100 text-black dark:text-white">
               🍳 صبحانه — تخم مرغ + نان تست
             </div>
 
-            <div className="bg-white dark:bg-[#1E293B] rounded-3xl p-6 shadow border border-blue-100">
+            <div className="bg-white dark:bg-[#1E293B] rounded-3xl p-6 shadow border border-blue-100 text-black dark:text-white">
               🍗 ناهار — مرغ + برنج
             </div>
 
-            <div className="bg-white dark:bg-[#1E293B] rounded-3xl p-6 shadow border border-blue-100">
+            <div className="bg-white dark:bg-[#1E293B] rounded-3xl p-6 shadow border border-blue-100 text-black dark:text-white">
               🥩 شام — گوشت + سیب زمینی
             </div>
           </div>
