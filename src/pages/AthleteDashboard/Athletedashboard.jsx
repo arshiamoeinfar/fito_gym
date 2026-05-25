@@ -57,7 +57,7 @@ export default function AthleteDashboard() {
   }
 
   return (
-    <div className="min-h-screen bg-blue-50 flex">
+<div className="min-h-screen bg-blue-50 dark:bg-[#0F172A] flex transition">
 
       <Sidebar
         activePage={activePage}

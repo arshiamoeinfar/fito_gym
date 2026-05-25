@@ -5,7 +5,7 @@ export default function MainContent({ activePage, workouts }) {
 
       {activePage === "workout" && (
         <div>
-          <h1 className="text-4xl font-bold text-blue-700 mb-8">
+          <h1 className="text-4xl font-bold  dark:text-blue-400 mb-8">
             برنامه تمرینی 💪
           </h1>
 
@@ -13,13 +13,13 @@ export default function MainContent({ activePage, workouts }) {
             {workouts.map((workout) => (
               <details
                 key={workout.id}
-                className="bg-white rounded-3xl shadow border border-blue-100 p-6"
+                className="bg-white dark:bg-[#1E293B] rounded-3xl shadow border border-blue-100 p-6"
               >
                 <summary className="cursor-pointer list-none">
-                  <h2 className="text-2xl font-bold text-blue-700">
+                  <h2 className="text-2xl font-bold  dark:text-blue-400">
                     {workout.title}
                   </h2>
-                  <p className="text-gray-500 mt-2">تاریخ: {workout.date}</p>
+                  <p className="text-gray-500 dark:text-gray-300 mt-2">تاریخ: {workout.date}</p>
                 </summary>
 
                 <div className="mt-6 space-y-4">
@@ -46,16 +46,16 @@ export default function MainContent({ activePage, workouts }) {
 
       {activePage === "progress" && (
         <div>
-          <h1 className="text-4xl font-bold text-blue-700 mb-8">
+          <h1 className="text-4xl font-bold  dark:text-blue-400 mb-8">
             وضعیت پیشرفت 📈
           </h1>
 
-          <div className="bg-white rounded-3xl p-6 shadow border border-blue-100">
+          <div className="bg-white dark:bg-[#1E293B] rounded-3xl p-6 shadow border border-blue-100">
             <div className="mb-6">
               <div className="flex justify-between mb-2">
                 <span>پیشرفت عضله سازی</span>
 
-                <span className="font-bold text-blue-700">72%</span>
+                <span className="font-bold  dark:text-blue-400">72%</span>
               </div>
 
               <div className="w-full bg-blue-100 rounded-full h-4">
@@ -70,20 +70,20 @@ export default function MainContent({ activePage, workouts }) {
 
       {activePage === "food" && (
         <div>
-          <h1 className="text-4xl font-bold text-blue-700 mb-8">
+          <h1 className="text-4xl font-bold  dark:text-blue-400 mb-8">
             برنامه غذایی 🍎
           </h1>
 
           <div className="space-y-4">
-            <div className="bg-white rounded-3xl p-6 shadow border border-blue-100">
+            <div className="bg-white dark:bg-[#1E293B] rounded-3xl p-6 shadow border border-blue-100">
               🍳 صبحانه — تخم مرغ + نان تست
             </div>
 
-            <div className="bg-white rounded-3xl p-6 shadow border border-blue-100">
+            <div className="bg-white dark:bg-[#1E293B] rounded-3xl p-6 shadow border border-blue-100">
               🍗 ناهار — مرغ + برنج
             </div>
 
-            <div className="bg-white rounded-3xl p-6 shadow border border-blue-100">
+            <div className="bg-white dark:bg-[#1E293B] rounded-3xl p-6 shadow border border-blue-100">
               🥩 شام — گوشت + سیب زمینی
             </div>
           </div>

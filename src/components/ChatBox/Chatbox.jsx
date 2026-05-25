@@ -38,7 +38,7 @@ export default function ChatBox() {
       {/* Header */}
       <div className="border-b pb-4 mb-4">
 
-        <h2 className="text-2xl font-bold text-blue-700">
+        <h2 className="text-2xl font-bold  dark:text-blue-400">
           چت با مربی 💬
         </h2>
 

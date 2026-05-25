@@ -8,7 +8,14 @@ export default function RightPanel({
 }) {
 
   return (
-    <div className="w-[350px] bg-white border-l border-blue-100 flex flex-col">
+<div className="w-[350px]
+bg-white
+dark:bg-[#111827]
+border-l
+border-blue-100
+dark:border-gray-800
+flex
+flex-col">
 
       {/* Header */}
 
@@ -16,7 +23,7 @@ export default function RightPanel({
 
         <div className="flex items-center justify-between mb-4">
 
-          <h2 className="text-2xl font-bold text-blue-700">
+          <h2 className="text-2xl font-bold  dark:text-blue-400">
 
             {assistantMode === "coach"
               ? "چت مربی 💬"
@@ -33,7 +40,7 @@ export default function RightPanel({
                   : "coach"
               )
             }
-            className="bg-blue-100 hover:bg-blue-200 text-blue-700 px-4 py-2 rounded-xl"
+            className="bg-blue-100 hover:bg-blue-200  dark:text-blue-400 px-4 py-2 rounded-xl"
           >
 
             {assistantMode === "coach"
